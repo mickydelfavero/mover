@@ -1,0 +1,37 @@
+# Move all files finded at startup?
+Movall = true
+
+# Source dir
+source = "/tmp/foo"
+
+# Destination dir
+destin = "/tmp/bar"
+
+# Recursive monitoring src dir?
+recurs = true
+
+# Monitor operation (CREATE / WRITE / REMOVE / RENAME / CHMOD)
+fileop = "CREATE"
+
+# Move only files matching regexp
+# regexp = ".*"
+regexp = "(?i)\\.xml$"
+
+# Log to syslog
+syslog = false
+
+# syslog tag
+logtag = "mover-uno"
+
+# If destination file exists overwrite it?
+owrite = false
+
+# Wait delay seconds before moving file
+delay = 3
+
+# Destination UID (set to -1 to avoid chown)
+uid = 1000
+
+# Destination GID (set to -1 to avoid chown)
+gid = 1000
+

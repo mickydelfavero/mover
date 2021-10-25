@@ -1,0 +1,18 @@
+[Unit]
+Description=mover
+# After==network.target
+
+[Service]
+Environment=
+Type=simple
+User=root
+Group=root
+ExecStart=/usr/local/bin/mover -conf /etc/mover/mover.toml
+Restart=on-failure
+RestartSec=3
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=mover
+
+[Install]
+WantedBy=multi-user.target
